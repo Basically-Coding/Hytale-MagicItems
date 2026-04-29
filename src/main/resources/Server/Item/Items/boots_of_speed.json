@@ -7,6 +7,12 @@
     "Parent": "Armor_Cloth_Linen_Legs",
     "Quality": "Uncommon",
     "MaxStack": 1,
+    "Armor": {
+        "ArmorSlot": "Legs",
+        "StatModifiers": {
+            "Speed": [{ "Amount": 5.0, "CalculationType": "Multiplicative" }]
+        }
+    },
     "Interactions": {
         "Equipped": {
             "Interactions": [
