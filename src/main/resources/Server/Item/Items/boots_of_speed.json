@@ -10,7 +10,7 @@
     "Interactions": {
         "Equipped": {
             "Interactions": [
-                { "Type": "Simple", "HorizontalSpeedMultiplier": 1.5 }
+                { "Type": "Simple", "HorizontalSpeedMultiplier": 5.0 }
             ]
         }
     }
