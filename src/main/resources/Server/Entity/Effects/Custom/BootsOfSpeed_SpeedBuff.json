@@ -1,0 +1,8 @@
+{
+    "Id": "BootsOfSpeed_SpeedBuff",
+    "Duration": 9999,
+    "OverlapBehavior": "Overwrite",
+    "ApplicationEffects": {
+        "HorizontalSpeedMultiplier": 1.5
+    }
+}

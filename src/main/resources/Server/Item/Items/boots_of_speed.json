@@ -6,35 +6,5 @@
     },
     "Parent": "Armor_Cloth_Linen_Legs",
     "Quality": "Uncommon",
-    "MaxStack": 1,
-    "Interactions": {
-        "Primary": {
-            "Interactions": [
-                { "Type": "EquipItem" },
-                {
-                    "Type": "ApplyEffect",
-                    "Entity": "User",
-                    "EffectId": {
-                        "Duration": 9999,
-                        "OverlapBehavior": "Overwrite",
-                        "ApplicationEffects": { "HorizontalSpeedMultiplier": 5.0 }
-                    }
-                }
-            ]
-        },
-        "Secondary": {
-            "Interactions": [
-                { "Type": "EquipItem" },
-                {
-                    "Type": "ApplyEffect",
-                    "Entity": "User",
-                    "EffectId": {
-                        "Duration": 9999,
-                        "OverlapBehavior": "Overwrite",
-                        "ApplicationEffects": { "HorizontalSpeedMultiplier": 5.0 }
-                    }
-                }
-            ]
-        }
-    }
+    "MaxStack": 1
 }
