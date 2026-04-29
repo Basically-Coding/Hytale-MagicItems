@@ -1,8 +1,8 @@
 {
     "Id": "BootsOfSpeed",
     "TranslationProperties": {
-        "Name": "Boots of Speed",
-        "Description": "Magical boots that grant swiftness to the wearer."
+        "Name": "Pants of Speed",
+        "Description": "Magical pants that grant swiftness to the wearer."
     },
     "Parent": "Armor_Cloth_Linen_Legs",
     "Quality": "Uncommon",
