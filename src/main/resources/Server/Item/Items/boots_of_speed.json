@@ -1,0 +1,17 @@
+{
+    "Id": "BootsOfSpeed",
+    "TranslationProperties": {
+        "Name": "Boots of Speed",
+        "Description": "Magical boots that grant swiftness to the wearer."
+    },
+    "Quality": "Uncommon",
+    "MaxStack": 1,
+    "Categories": ["Items.Armor.Feet"],
+    "Interactions": {
+        "Equipped": {
+            "Interactions": [
+                { "Type": "Simple", "HorizontalSpeedMultiplier": 1.5 }
+            ]
+        }
+    }
+}
