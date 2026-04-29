@@ -24,5 +24,6 @@ hytale {
         Group = "Basically-Coding"
         Name = "MagicItems"
         Main = "dev.basicallycoding.magicitems.MagicItemsPlugin"
+        IncludesAssetPack = true
     }
 }
