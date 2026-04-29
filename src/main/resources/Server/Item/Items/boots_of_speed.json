@@ -4,9 +4,9 @@
         "Name": "Boots of Speed",
         "Description": "Magical boots that grant swiftness to the wearer."
     },
+    "Parent": "Armor_Cloth_Linen_Legs",
     "Quality": "Uncommon",
     "MaxStack": 1,
-    "Categories": ["Items.Armor.Feet"],
     "Interactions": {
         "Equipped": {
             "Interactions": [
