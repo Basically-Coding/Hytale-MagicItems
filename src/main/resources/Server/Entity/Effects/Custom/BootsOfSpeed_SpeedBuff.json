@@ -1,5 +1,4 @@
 {
-    "Id": "BootsOfSpeed_SpeedBuff",
     "Duration": 9999,
     "OverlapBehavior": "Overwrite",
     "ApplicationEffects": {
