@@ -31,6 +31,24 @@ normal if you know what you are doing.
 
 For in-depth configuration, you can visit the [ScaffoldIt Plugin Docs](https://scaffoldit.dev).
 
+## Configuration
+
+The mod reads a small JSON config from the per-plugin data directory Hytale assigns it (typically under `%APPDATA%\Hytale\UserData\` — the exact path is logged at first launch). On first run, the file is created with sensible defaults; edit it and restart Hytale to apply changes.
+
+| Field | Default | Effect |
+|---|---|---|
+| `SpeedMultiplier` | `2.5` | Multiplier applied to forward-run, sprint, backward-run, and strafe speeds while the Pants of Speed are equipped. Hytale clamps movement multipliers at `15`; values above that desync the client. |
+
+Example `config.json`:
+
+```json
+{
+    "SpeedMultiplier": 4.0
+}
+```
+
+The config is in your platform's per-user data directory and lives outside the mod's git repo by design — your tweaks survive mod updates, and committing them isn't necessary unless you want to share defaults across machines.
+
 ## Troubleshooting
 
 - **Gradle sync fails in IntelliJ** –
