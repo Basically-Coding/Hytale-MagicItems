@@ -17,6 +17,7 @@ import com.hypixel.hytale.server.core.inventory.ItemStack;
 import com.hypixel.hytale.server.core.inventory.container.ItemContainer;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
+import dev.basicallycoding.magicitems.config.MagicItemsConfig;
 
 import javax.annotation.Nonnull;
 import java.util.logging.Level;
@@ -24,11 +25,14 @@ import java.util.logging.Level;
 public class BootsOfSpeedInventorySystem extends EntityEventSystem<EntityStore, InventoryChangeEvent> {
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
     private static final String BOOTS_ID = "boots_of_speed";
-    private static final float SPEED_MULTIPLIER = 2.5f;
 
-    public BootsOfSpeedInventorySystem() {
+    private final MagicItemsConfig config;
+
+    public BootsOfSpeedInventorySystem(@Nonnull MagicItemsConfig config) {
         super(InventoryChangeEvent.class);
-        LOGGER.at(Level.INFO).log("[BootsOfSpeed] System constructed");
+        this.config = config;
+        LOGGER.at(Level.INFO).log(
+            "[BootsOfSpeed] System constructed (speedMultiplier=" + config.speedMultiplier() + ")");
     }
 
     @Override
@@ -70,11 +74,12 @@ public class BootsOfSpeedInventorySystem extends EntityEventSystem<EntityStore, 
         // Avoids compounding multipliers across repeated equip-state events.
         mm.applyDefaultSettings();
         if (bootsInArmor) {
+            float multiplier = config.speedMultiplier();
             MovementSettings s = mm.getSettings();
-            s.forwardRunSpeedMultiplier    *= SPEED_MULTIPLIER;
-            s.forwardSprintSpeedMultiplier *= SPEED_MULTIPLIER;
-            s.backwardRunSpeedMultiplier   *= SPEED_MULTIPLIER;
-            s.strafeRunSpeedMultiplier     *= SPEED_MULTIPLIER;
+            s.forwardRunSpeedMultiplier    *= multiplier;
+            s.forwardSprintSpeedMultiplier *= multiplier;
+            s.backwardRunSpeedMultiplier   *= multiplier;
+            s.strafeRunSpeedMultiplier     *= multiplier;
         }
 
         PlayerRef pr = player.getPlayerRef();
@@ -82,6 +87,6 @@ public class BootsOfSpeedInventorySystem extends EntityEventSystem<EntityStore, 
 
         LOGGER.at(Level.INFO).log(
             "[BootsOfSpeed] bootsInArmor=" + bootsInArmor
-            + " → multiplier=" + (bootsInArmor ? SPEED_MULTIPLIER : 1.0f));
+            + " → multiplier=" + (bootsInArmor ? config.speedMultiplier() : 1.0f));
     }
 }
