@@ -24,7 +24,7 @@ import java.util.logging.Level;
 public class BootsOfSpeedInventorySystem extends EntityEventSystem<EntityStore, InventoryChangeEvent> {
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
     private static final String BOOTS_ID = "boots_of_speed";
-    private static final float SPEED_MULTIPLIER = 1.5f;
+    private static final float SPEED_MULTIPLIER = 2.5f;
 
     public BootsOfSpeedInventorySystem() {
         super(InventoryChangeEvent.class);
