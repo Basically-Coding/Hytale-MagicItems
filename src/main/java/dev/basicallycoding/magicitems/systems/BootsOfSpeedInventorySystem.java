@@ -69,7 +69,7 @@ public class BootsOfSpeedInventorySystem extends EntityEventSystem<EntityStore, 
             ItemStack stack = changed.getItemStack(i);
             String itemId = (stack != null) ? stack.getItemId() : "<null>";
             LOGGER.at(Level.INFO).log("[BootsOfSpeed] armor slot " + i + ": " + itemId);
-            if (stack != null && BOOTS_ID.equals(stack.getItemId())) {
+            if (stack != null && BOOTS_ID.equalsIgnoreCase(stack.getItemId())) {
                 bootsInArmor = true;
             }
         }
