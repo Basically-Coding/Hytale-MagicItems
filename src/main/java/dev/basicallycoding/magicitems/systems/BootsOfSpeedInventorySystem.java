@@ -22,7 +22,7 @@ import java.util.logging.Level;
 
 public class BootsOfSpeedInventorySystem extends EntityEventSystem<EntityStore, InventoryChangeEvent> {
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
-    private static final String BOOTS_ID = "BootsOfSpeed";
+    private static final String BOOTS_ID = "boots_of_speed";
     private static final String EFFECT_ID = "BootsOfSpeed_SpeedBuff";
     private static final int EFFECT_SLOT = 1;
 
